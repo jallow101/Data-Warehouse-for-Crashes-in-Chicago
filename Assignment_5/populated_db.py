@@ -8,10 +8,10 @@ load_dotenv()
 # Define the connection parameters
 #read dorm env file
 
-server   = os.getenv('SERVER')
-database = os.getenv('DATABASE')
-username = os.getenv('USERNAME')
-password = os.getenv('PASSWORD')
+server = 'tcp:lds.di.unipi.it' 
+database = 'Group_ID_16_DB' 
+username = 'Group_ID_16'
+password = 'HWO5552G' 
 
 # Database connection string
 DATABASE_CONNECTION_STRING = (
@@ -22,24 +22,16 @@ DATABASE_CONNECTION_STRING = (
 # Dimensions and their columns
 #Done  ---->  Vehicle, Injuries, Geography, Weather, Cause, Date,
 # Failed ---->   Person, Damage_to_User, Crash
-dimensions = {   
-    #"Vehicle": ["VEHICLE_ID","UNIT_NO", "UNIT_TYPE", "MAKE", "MODEL", "LIC_PLATE_STATE", "VEHICLE_YEAR", "VEHICLE_DEFECT", "VEHICLE_TYPE", "VEHICLE_USE", "TRAVEL_DIRECTION", "MANEUVER", "OCCUPANT_CNT", "FIRST_CONTACT_POINT"],
-    
-    #"Injuries": ["INJURIES_ID","INJURY_CLASSIFICATION", "MOST_SEVERE_INJURY", "INJURIES_TOTAL", "INJURIES_FATAL", "INJURIES_INCAPACITATING", "INJURIES_NON_INCAPACITATING", "INJURIES_REPORTED_NOT_EVIDENT", "INJURIES_NO_INDICATION", "INJURIES_UNKNOWN"],
-    
-    #"Crash": ["CRASH_ID","FIRST_CRASH_TYPE", "REPORT_TYPE", "CRASH_TYPE"],
-
-    #"Person": ["PERSON_ID","PERSON_TYPE", "CITY", "STATE", "SEX", "AGE", "AGE_GROUP", "PHYSICAL_CONDITION", "SAFETY_EQUIPMENT", "AIRBAG_DEPLOYED", "EJECTION"],
-
+dimensions = {
+    "Injuries": ["INJURIES_ID","INJURY_CLASSIFICATION", "MOST_SEVERE_INJURY", "INJURIES_TOTAL", "INJURIES_FATAL", "INJURIES_INCAPACITATING", "INJURIES_NON_INCAPACITATING", "INJURIES_REPORTED_NOT_EVIDENT", "INJURIES_NO_INDICATION", "INJURIES_UNKNOWN"],
+    "Crash": ["CRASH_ID","FIRST_CRASH_TYPE", "REPORT_TYPE", "CRASH_TYPE"],
+    #"Person": ["PERSON_ID","PERSON_TYPE", "CITY", "STATE", "SEX", "AGE","AGE_GROUP", "PHYSICAL_CONDITION", "SAFETY_EQUIPMENT", "AIRBAG_DEPLOYED", "EJECTION"],
+    "Vehicle": ["VEHICLE_ID", "UNIT_TYPE", "MAKE", "MODEL", "LIC_PLATE_STATE", "VEHICLE_YEAR", "VEHICLE_DEFECT", "VEHICLE_TYPE", "VEHICLE_USE", "TRAVEL_DIRECTION", "MANEUVER", "OCCUPANT_CNT", "FIRST_CONTACT_POINT"],
     #"Weather": ["WEATHER_ID","WEATHER_CONDITION", "LIGHTING_CONDITION"],
-
-    #"Cause": ["CAUSE_ID","BAC_RESULT", "DRIVER_ACTION", "DRIVER_VISION", "PRIM_CONTRIBUTORY_CAUSE", "SEC_CONTRIBUTORY_CAUSE"],
-
-    #"Geography": ["GEOGRAPHY_ID","POSTED_SPEED_LIMIT", "TRAFFIC_CONTROL_DEVICE", "DEVICE_CONDITION", "TRAFFICWAY_TYPE", "ALIGNMENT", "ROADWAY_SURFACE_COND", "ROAD_DEFECT", "STREET_NAME", "STREET_NO", "STREET_DIRECTION","BEAT_OF_OCCURRENCE", "LATITUDE", "LONGITUDE", "LOCATION"],
-
-    "Damage_to_User": ["DATE_ID","CRASH_ID","VEHICLE_ID","INJURIES_ID","PERSON_ID","WEATHER_ID","CAUSE_ID", "GEOGRAPHY_ID","DAMAGE", "DAMAGE_CATEGORY", "NUM_UNITS"],
-   
-   # "Date": ["DATE_ID", "DATE","DATE_POLICE_NOTIFIED", "TIME", "YEAR", "MONTH","WEEK","DAY", "HOUR", "QUARTER", "WEEKEND"]
+    "Cause": ["CAUSE_ID","BAC_RESULT", "DRIVER_ACTION", "DRIVER_VISION", "PRIM_CONTRIBUTORY_CAUSE", "SEC_CONTRIBUTORY_CAUSE"],
+    "Geography": ["GEOGRAPHY_ID","POSTED_SPEED_LIMIT", "TRAFFIC_CONTROL_DEVICE", "DEVICE_CONDITION", "TRAFFICWAY_TYPE", "ALIGNMENT", "ROADWAY_SURFACE_COND", "ROAD_DEFECT", "STREET_NAME", "STREET_NO", "STREET_DIRECTION","BEAT_OF_OCCURRENCE", "LATITUDE", "LONGITUDE", "LOCATION"],
+    #"Damage_to_User": ["DATE_ID","CRASH_ID","VEHICLE_ID","INJURIES_ID","PERSON_ID","WEATHER_ID","CAUSE_ID", "GEOGRAPHY_ID","DAMAGE", "DAMAGE_CATEGORY", "NUM_UNITS","UNIT_NO"],
+    "Date": ["DATE_ID", "DATE","DATE_POLICE_NOTIFIED", "TIME", "YEAR", "MONTH","WEEK", "DAY", "HOUR", "QUARTER", "WEEKEND"]
 }
 
 # Establish a database connection
@@ -102,7 +94,7 @@ def populate_tables1(batch_size=1000):
     connection = connect_to_db()
     cursor = connection.cursor()
 
-    directory_path = r"C:\Users\PC2\Desktop\DSS\Project\Scripts\Dimensions\new dims"
+    directory_path = r"C:\Users\PC2\Desktop\DSS\DSS_Crashlytics_Data_Warehouse\Data\dimensions"
 
    # Print files in directory
     print("Files in directory:")
@@ -249,6 +241,6 @@ if __name__ == "__main__":
     print("Creating progress tracking table...")
     #create_progress_table()
     print("Populating tables...")
-    directory_path = r"C:\Users\PC2\Desktop\DSS\Project\Scripts\Dimensions\new dims"
+    directory_path = r"C:\Users\PC2\Desktop\DSS\DSS_Crashlytics_Data_Warehouse\Data\dimensions"
     populate_tables(directory_path ,batch_size=4000)  # Adjust batch size for performance
     print("Done.")
