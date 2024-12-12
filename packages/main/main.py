@@ -60,6 +60,25 @@ def left_join(left_data, right_data, on_key):
 
     return merged_data
 
+def my_left_join(left_data, right_data, on_key):
+
+    left_keys = [ ]
+    #get the keys of the left data
+    for row in left_data:
+        left_key = row.get(on_key)
+
+
+def left_join1(base_data, join_data, key_column):
+    join_dict = {row[key_column]: row for row in join_data}
+    result = []
+    for base_row in base_data:
+        key = base_row[key_column]
+        joined_row = base_row.copy()
+        if key in join_dict:
+            joined_row.update(join_dict[key])
+        result.append(joined_row)
+    return result
+
 
 def create_date_dimension(dataset, date_column):
     # Headers for the date dimension CSV

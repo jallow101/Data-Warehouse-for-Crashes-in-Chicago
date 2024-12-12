@@ -6,14 +6,14 @@ import subprocess
 #run pcleaner.py in people_cleaner folder
 
 cmd_people = 'python ./people_cleaner/pcleaner.py'
-subprocess.run(cmd_people, shell=True)
+#subprocess.run(cmd_people, shell=True)
 
 cmd_vehicle = 'python vehicle_cleaner/vcleaner.py'
-subprocess.run(cmd_vehicle, shell=True)
+#subprocess.run(cmd_vehicle, shell=True)
 
 
 cmd_crash = 'python crash_cleaner/ccleaner.py'
-subprocess.run(cmd_crash, shell=True)
+#subprocess.run(cmd_crash, shell=True)
 
 
 cmd_mereger = 'python merger.py'

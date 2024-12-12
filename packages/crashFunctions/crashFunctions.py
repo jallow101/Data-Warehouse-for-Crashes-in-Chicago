@@ -31,7 +31,7 @@ def create_unique_address_column(data):
         record['CAUSE_ID'] = next(cause_id_gen)
         record['GEOGRAPHY_ID'] = next(geography_id_gen)
 
-        record['UNIQUE_ADDRESS_BEAT'] =   int(float(record['BEAT_OF_OCCURRENCE']))
+        record['UNIQUE_ADDRESS_BEAT'] =   record['BEAT_OF_OCCURRENCE']
 
         #set data types for NUM_UNITS, INJURIES_TOTAL, INJURIES_FATAL, INJURIES_INCAPACITATING, INJURIES_NON_INCAPACITATING, INJURIES_REPORTED_NOT_EVIDENT
         record['BEAT_OF_OCCURRENCE'] = int(float(record['BEAT_OF_OCCURRENCE'])) if record['BEAT_OF_OCCURRENCE'] else 0

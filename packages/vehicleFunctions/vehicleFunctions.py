@@ -70,13 +70,13 @@ def clean_vehicle_data_exact(rows):
             
             if not row['VEHICLE_ID'] or  row['VEHICLE_ID'] == "":
                 if row['UNIT_TYPE'] == 'BICYCLE':
-                    row['VEHICLE_ID'] = 0
+                    row['VEHICLE_ID'] = 900000
                 elif row['UNIT_TYPE'] == 'PEDESTRIAN':
-                    row['VEHICLE_ID'] = 1
+                    row['VEHICLE_ID'] = 900001
                 elif row['UNIT_TYPE'] == 'NON-MOTOR VEHICLE':
-                    row['VEHICLE_ID'] = 2
+                    row['VEHICLE_ID'] = 900002
                 elif row['UNIT_TYPE'] == 'NON-CONTACT VEHICLE':
-                    row['VEHICLE_ID'] = 3
+                    row['VEHICLE_ID'] = 900003
                 else:
                     row['VEHICLE_ID'] = "Delete ME"
             

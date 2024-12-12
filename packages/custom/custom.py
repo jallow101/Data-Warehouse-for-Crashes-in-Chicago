@@ -8,8 +8,6 @@ from datetime import datetime
 def hi(msg):
     print(msg)
 
-
-
 def calculate_median_mode_values(rows):
     age_data = defaultdict(list)
     damage_data = defaultdict(lambda: defaultdict(list))
@@ -109,21 +107,21 @@ def fill_and_clean_people_data(rows, medians, modes):
 
         if not row['VEHICLE_ID'] or  row['VEHICLE_ID'] == "":
                 if row['PERSON_TYPE'] == 'BICYCLE':
-                    row['VEHICLE_ID'] = 0
+                    row['VEHICLE_ID'] = 900000
                 elif row['PERSON_TYPE'] == 'PEDESTRIAN':
-                    row['VEHICLE_ID'] = 1
+                    row['VEHICLE_ID'] = 900001
                 elif row['PERSON_TYPE'] == 'NON-MOTOR VEHICLE':
-                    row['VEHICLE_ID'] = 2
+                    row['VEHICLE_ID'] = 900002
                 elif row['PERSON_TYPE'] == 'NON-CONTACT VEHICLE':
-                    row['VEHICLE_ID'] = 3
+                    row['VEHICLE_ID'] = 900003
                 elif row['PERSON_TYPE'] == 'PASSESNGER':
-                    row['VEHICLE_ID'] = 4
+                    row['VEHICLE_ID'] = 900004
                 else:
-                    row['VEHICLE_ID'] = 5
+                    row['VEHICLE_ID'] = 900005
         
         for col in row:
             if col not in ['PERSON_TYPE', 'AGE', 'DAMAGE', 'SEX', 'CITY', 'STATE'] and row[col] in ['UNKNOWN', 'N/A', '', None]:
-                row[col] = modes['other_columns'].get(person_type, {}).get(col, 0000)
+                row[col] = modes['other_columns'].get(person_type, {}).get(col, 'NOT APPLICABLE')
         row['CITY'] = row.get('CITY', 'UNKNOWN') or 'UNKNOWN'
         row['STATE'] = row.get('STATE', 'Unknown') or 'XX'
 
