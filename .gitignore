@@ -1,0 +1,11 @@
+# Ignore specific files in the Data directory
+Data/Crashes.csv
+Data/Vehicles.csv
+Data/People.csv
+
+# Ignore entire directories
+Data/cleaned/
+Data/merged/
+
+# Ignore all .env files
+*.env
