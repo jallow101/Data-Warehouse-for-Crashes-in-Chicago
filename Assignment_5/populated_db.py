@@ -10,8 +10,8 @@ load_dotenv()
 
 server = 'tcp:lds.di.unipi.it' 
 database = 'Group_ID_16_DB' 
-username = 'Group_ID_16'
-password = 'HWO5552G' 
+username = 'Group_ID_156_CGCTCCG'
+password = 'XRDTDD6CTXXXXXX' 
 
 # Database connection string
 DATABASE_CONNECTION_STRING = (
