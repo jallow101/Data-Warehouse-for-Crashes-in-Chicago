@@ -1,0 +1,2133 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/5/2024 3:11:37 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UTENTE-Q3NL7IKE"
+  DTS:CreatorName="UTENTE-Q3NL7IKE\LDS"
+  DTS:DTSID="{51009D62-F155-401E-A5F3-EB697BE884DE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{3CFCFBFC-2FF6-47A0-96AD-9BECB7CC1FC7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1F9937CC-41C2-47FE-A5B7-6620F094B8E4}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\LDS\Downloads\Query8b.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VEHICLE_TYPE"
+              DTS:DTSID="{AD222E65-9F0D-4C89-9812-A130DFD43617}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WEATHER_CONDITION"
+              DTS:DTSID="{AE8B502D-3212-4058-BBFD-795468B68E26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL_DAMAGE_COSTS"
+              DTS:DTSID="{2D232FF4-D883-4D2F-A426-3F61B63E63EC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9D6C3D52-4A59-4E55-AD67-F1CA15A3B26F}"
+      DTS:ObjectName="lds.di.unipi.it.Group_ID_16_DB.Group_ID_16">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_ID_16;Initial Catalog=Group_ID_16_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{9D6C3D52-4A59-4E55-AD67-F1CA15A3B26F}lds.di.unipi.it.Group_ID_16_DB.Group_ID_16;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANbWtKeho/k2Ip8+mcqq/pgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBVA7QcaIQn+vdSVZv3PhbTvEXw2w+0hwYhsBfse0GSQAAAAAOgAAAAAIAACAAAADga9Ou5MzWoxOYSbFKNpBmvA0ITirokg9qHv8asGmDNCAAAAB1JDbD+4jTcQUsbeFxYYQjg+gIGXpBx+2tAy1h21j61UAAAADKOcSxoSY73Mbjz/mWwwbC9CxopgzurhZvZnjtphI5vY8IQSfAdh0zWCVscXvgHf6eZmD2I9y7qXhIgg3H2ZFW</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8AFE0918-CAD1-46A2-AAA3-622E35A9CCB3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[WEATHER_CONDITION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="WEATHER_CONDITION"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[WEATHER_CONDITION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[DAMAGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[WEATHER_CONDITION]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAMAGE_COSTS]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAMAGE_COSTS]"
+                      name="TOTAL_DAMAGE_COSTS"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[DAMAGE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\damage_to_user"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="damage_to_user"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Group_ID_16].[damage_to_user]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\damage_to_user.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_ID]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE]"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_ID]"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VEHICLE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DATE_ID]"
+                      dataType="i4"
+                      name="DATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[CRASH_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CRASH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[PERSON_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PERSON_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE]"
+                      dataType="numeric"
+                      name="DAMAGE"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE_CATEGORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DAMAGE_CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[NUM_UNITS]"
+                      dataType="i4"
+                      name="NUM_UNITS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[GEOGRAPHY_ID]"
+                      dataType="i4"
+                      name="GEOGRAPHY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[CAUSE_ID]"
+                      dataType="i4"
+                      name="CAUSE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_ID]"
+                      dataType="i4"
+                      name="WEATHER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[INJURIES_ID]"
+                      dataType="i4"
+                      name="INJURIES_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[UNIT_NO]"
+                      dataType="i4"
+                      name="UNIT_NO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VEHICLE_TYPE]"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[VEHICLE_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[WEATHER_CONDITION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="WEATHER_CONDITION"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WEATHER_CONDITION]"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[WEATHER_CONDITION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TOTAL_DAMAGE_COSTS]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COSTS"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TOTAL_DAMAGE_COSTS]"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAMAGE_COSTS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VEHICLE_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="WEATHER_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TOTAL_DAMAGE_COSTS]"
+                      dataType="numeric"
+                      name="TOTAL_DAMAGE_COSTS"
+                      precision="18" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[VEHICLE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VEHICLE_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_TYPE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[VEHICLE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VEHICLE_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[VEHICLE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[WEATHER_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[VEHICLE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[VEHICLE_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[WEATHER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge Join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[WEATHER_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[VEHICLE_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[DAMAGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[WEATHER_CONDITION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="WEATHER_CONDITION"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_CONDITION]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[VEHICLE_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[WEATHER_CONDITION]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[VEHICLE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VEHICLE_ID"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[WEATHER_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[WEATHER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[VEHICLE_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VEHICLE_ID"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_TYPE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[WEATHER_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[VEHICLE_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VEHICLE_TYPE"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[WEATHER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[VEHICLE_TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 3"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 3"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[WEATHER_ID]"
+                      cachedDataType="i4"
+                      cachedName="WEATHER_ID"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[WEATHER_CONDITION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="WEATHER_CONDITION"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_CONDITION]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_CONDITION]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\vehicle"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="vehicle"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Group_ID_16].[vehicle]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\vehicle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_ID]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_TYPE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VEHICLE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[UNIT_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="UNIT_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[MAKE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="MAKE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[MODEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="MODEL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[LIC_PLATE_STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LIC_PLATE_STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_YEAR]"
+                      dataType="i4"
+                      name="VEHICLE_YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_DEFECT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VEHICLE_DEFECT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VEHICLE_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_USE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VEHICLE_USE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[TRAVEL_DIRECTION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="TRAVEL_DIRECTION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[MANEUVER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="MANEUVER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[OCCUPANT_CNT]"
+                      dataType="i4"
+                      name="OCCUPANT_CNT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output].ExternalColumns[FIRST_CONTACT_POINT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FIRST_CONTACT_POINT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[VEHICLE_ID]"
+                      name="VEHICLE_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[VEHICLE_TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Error Output].Columns[VEHICLE_TYPE]"
+                      name="VEHICLE_TYPE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\weather"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="weather"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Group_ID_16].[weather]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\weather.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_ID]"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_CONDITION]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_ID]"
+                      dataType="i4"
+                      name="WEATHER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="WEATHER_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output].ExternalColumns[LIGHTING_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LIGHTING_CONDITION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[WEATHER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[WEATHER_ID]"
+                      name="WEATHER_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[WEATHER_CONDITION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\weather.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output1]"
+              endId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\weather.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output2]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\vehicle.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
+              endId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output2]"
+              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output3]"
+              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="87,61" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="111,42"
+          Id="Package\Data Flow Task\vehicle"
+          TopLeft="10,116" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 2"
+          TopLeft="376.666666666667,323.333333333333" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="260,118" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="680,555" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Merge Join 1"
+          TopLeft="570,358.75" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="325,224" />
+        <NodeLayout
+          Size="117,42"
+          Id="Package\Data Flow Task\weather"
+          TopLeft="603.333333333333,195.555555555556" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\damage_to_user"
+          TopLeft="243,15" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\Aggregate"
+          TopLeft="631.428571428571,455.714285714286" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 3"
+          TopLeft="658.888888888889,287.777777777778" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="95,210" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output3]"
+          TopLeft="202,231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,14"
+              Start="0,0"
+              End="115.5,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57.5,0"
+                    Point2="61.5,0"
+                    Point3="61.5,4" />
+                  <mssgle:LineSegment
+                    End="61.5,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.5,10"
+                    Point2="61.5,14"
+                    Point3="65.5,14" />
+                  <mssgle:LineSegment
+                    End="115.5,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output2]"
+          TopLeft="309,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,64"
+              Start="0,0"
+              End="81,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="4,32" />
+                  <mssgle:LineSegment
+                    End="77,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,32"
+                    Point2="81,32"
+                    Point3="81,36" />
+                  <mssgle:LineSegment
+                    End="81,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="712.388888888889,329.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72.8888888888889,28.9722222222222"
+              Start="0,0"
+              End="-72.8888888888889,21.4722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.4861111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.4861111111111"
+                    Point2="0,14.4861111111111"
+                    Point3="-4,14.4861111111111" />
+                  <mssgle:LineSegment
+                    End="-68.8888888888889,14.4861111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-68.8888888888889,14.4861111111111"
+                    Point2="-72.8888888888889,14.4861111111111"
+                    Point3="-72.8888888888889,18.4861111111111" />
+                  <mssgle:LineSegment
+                    End="-72.8888888888889,21.4722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="483.666666666667,344.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.3333333333333,35.4166666666667"
+              Start="0,0"
+              End="78.8333333333333,35.4166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.1666666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.1666666666667,0"
+                    Point2="43.1666666666667,0"
+                    Point3="43.1666666666667,4" />
+                  <mssgle:LineSegment
+                    End="43.1666666666667,31.4166666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.1666666666667,31.4166666666667"
+                    Point2="43.1666666666667,35.4166666666667"
+                    Point3="47.1666666666667,35.4166666666667" />
+                  <mssgle:LineSegment
+                    End="78.8333333333333,35.4166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
+          TopLeft="65.5,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83,52"
+              Start="0,0"
+              End="83,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="79,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79,26"
+                    Point2="83,26"
+                    Point3="83,30" />
+                  <mssgle:LineSegment
+                    End="83,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="322,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13,61"
+              Start="0,0"
+              End="-13,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="-4,30.5" />
+                  <mssgle:LineSegment
+                    End="-9,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9,30.5"
+                    Point2="-13,30.5"
+                    Point3="-13,34.5" />
+                  <mssgle:LineSegment
+                    End="-13,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="661.833333333333,237.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.5555555555555,50.2222222222222"
+              Start="0,0"
+              End="50.5555555555555,42.7222222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1111111111111"
+                    Point2="0,25.1111111111111"
+                    Point3="4,25.1111111111111" />
+                  <mssgle:LineSegment
+                    End="46.5555555555555,25.1111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.5555555555555,25.1111111111111"
+                    Point2="50.5555555555555,25.1111111111111"
+                    Point3="50.5555555555555,29.1111111111111" />
+                  <mssgle:LineSegment
+                    End="50.5555555555555,42.7222222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
+          TopLeft="390,266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.166666666667,57.333333333333"
+              Start="0,0"
+              End="40.166666666667,49.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.6666666666665"
+                    Point2="0,28.6666666666665"
+                    Point3="4,28.6666666666665" />
+                  <mssgle:LineSegment
+                    End="36.166666666667,28.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.166666666667,28.6666666666665"
+                    Point2="40.166666666667,28.6666666666665"
+                    Point3="40.166666666667,32.6666666666665" />
+                  <mssgle:LineSegment
+                    End="40.166666666667,49.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="639.5,400.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.4285714285714,54.9642857142857"
+              Start="0,0"
+              End="55.4285714285714,47.4642857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.4821428571429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.4821428571429"
+                    Point2="0,27.4821428571429"
+                    Point3="4,27.4821428571429" />
+                  <mssgle:LineSegment
+                    End="51.4285714285714,27.4821428571429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.4285714285714,27.4821428571429"
+                    Point2="55.4285714285714,27.4821428571429"
+                    Point3="55.4285714285714,31.4821428571429" />
+                  <mssgle:LineSegment
+                    End="55.4285714285714,47.4642857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="694.928571428571,497.714285714286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.0714285714286,57.2857142857143"
+              Start="0,0"
+              End="71.0714285714286,49.7857142857143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6428571428571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.6428571428571"
+                    Point2="0,28.6428571428571"
+                    Point3="4,28.6428571428571" />
+                  <mssgle:LineSegment
+                    End="67.0714285714286,28.6428571428571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.0714285714286,28.6428571428571"
+                    Point2="71.0714285714286,28.6428571428571"
+                    Point3="71.0714285714286,32.6428571428571" />
+                  <mssgle:LineSegment
+                    End="71.0714285714286,49.7857142857143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\vehicle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\weather">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\damage_to_user">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

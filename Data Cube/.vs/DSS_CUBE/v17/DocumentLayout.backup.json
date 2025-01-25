@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|solutionrelative:DSS_CUBE\\Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|solutionrelative:DSS_CUBE\\Group ID 16 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB cube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|solutionrelative:DSS_CUBE\\Group ID 16 DB cube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Person.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F0C20D8F-7F0A-41BC-8192-5B2B207365CB}|DSS_CUBE\\DSS_CUBE.dwproj|solutionrelative:DSS_CUBE\\Person.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d52cee1-a15c-42fd-8d30-faacc8d1dd02}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Group ID 16 DB cube.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB cube.cube",
+              "RelativeDocumentMoniker": "DSS_CUBE\\Group ID 16 DB cube.cube",
+              "ToolTip": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB cube.cube [Design]",
+              "RelativeToolTip": "DSS_CUBE\\Group ID 16 DB cube.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-03T21:58:37.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Person.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Person.dim",
+              "RelativeDocumentMoniker": "DSS_CUBE\\Person.dim",
+              "ToolTip": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Person.dim [Design]",
+              "RelativeToolTip": "DSS_CUBE\\Person.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-30T21:25:41.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Date.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Date.dim",
+              "RelativeDocumentMoniker": "DSS_CUBE\\Date.dim",
+              "ToolTip": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Date.dim [Design]",
+              "RelativeToolTip": "DSS_CUBE\\Date.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-30T21:16:33.763Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Group ID 16 DB.dsv [Design]",
+              "DocumentMoniker": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB.dsv",
+              "RelativeDocumentMoniker": "DSS_CUBE\\Group ID 16 DB.dsv",
+              "ToolTip": "C:\\Users\\PC2\\Downloads\\DSS_CUBE\\DSS_CUBE\\DSS_CUBE\\Group ID 16 DB.dsv [Design]",
+              "RelativeToolTip": "DSS_CUBE\\Group ID 16 DB.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-29T23:06:31.243Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

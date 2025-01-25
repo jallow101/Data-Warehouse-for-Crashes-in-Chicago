@@ -1,0 +1,34 @@
+WITH
+-- Calculate the damage for the current year
+MEMBER [Measures].[Current Year Damage] AS
+    [Measures].[DAMAGE]
+ 
+-- Calculate the damage for the previous year
+MEMBER [Measures].[Previous Year Damage] AS
+    ([Date].[Year].CurrentMember.PrevMember, [Measures].[DAMAGE])
+ 
+-- Calculate the percentage change with respect to the previous year
+MEMBER [Measures].[Damage Percentage Change] AS
+    IIF(
+        [Measures].[Previous Year Damage] <> 0,
+        ([Measures].[Current Year Damage] - [Measures].[Previous Year Damage]) / [Measures].[Previous Year Damage] * 100,
+        NULL
+    ),
+    FORMAT_STRING = "0.00%"
+ 
+SELECT
+{
+    [Measures].[Current Year Damage],
+    [Measures].[Previous Year Damage],
+    [Measures].[Damage Percentage Change]
+} ON COLUMNS,
+ 
+NON EMPTY
+{
+    CROSSJOIN(
+        [Geography].[BEAT OF OCCURRENCE].Members,
+        [Date].[Year].Members
+    )
+} ON ROWS
+ 
+FROM [Group ID 16 DB cube]

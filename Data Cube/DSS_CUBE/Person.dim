@@ -1,0 +1,382 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bdd2c739-5a2c-411d-8888-ffc80c6f5c24" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Person</ID>
+  <Name>Person</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1912" scrolltop="-2315" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12192" y="22035" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="person" left="5206" top="-1101" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4339" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000f310000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Group_ID_16_person" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1912</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2315</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>5206</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-1101</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="164">
+            <Shape Id="PERSON ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="PERSON ID" />
+                <Attribute Id="AGE" />
+                <Attribute Id="AGE GROUP" />
+                <Attribute Id="AIRBAG DEPLOYED" />
+                <Attribute Id="EJECTION" />
+                <Attribute Id="PERSON TYPE" />
+                <Attribute Id="PHYSICAL CONDITION" />
+                <Attribute Id="SAFETY EQUIPMENT" />
+                <Attribute Id="SEX" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="CITY" Expanded="false">
+              <Attributes>
+                <Attribute Id="CITY" />
+              </Attributes>
+              <Position x="230" y="20" />
+            </Shape>
+            <Shape Id="STATE" Expanded="false">
+              <Attributes>
+                <Attribute Id="STATE" />
+              </Attributes>
+              <Position x="230" y="68" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="823ebe26-a07e-4dcc-957d-0fa8c54a2833">
+    <DataSourceViewID>Group ID 16 DB</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="33bb073b-6ce3-4b91-8fca-d5d3dcc73aa5">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="548fe9c7-44b9-44ad-9249-24680739ea85">
+      <ID>PERSON ID</ID>
+      <Name>PERSON ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="07ef44eb-7a98-49d7-8313-46793ea0239f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dca18598-4fa2-4279-843f-a65fd977d5df">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>PERSON_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b7a41e02-e24c-4cfc-ad5c-12c97f396b87">
+          <AttributeID>PERSON TYPE</AttributeID>
+          <Name>PERSON TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53579905-e565-48fa-8444-3d054e0c69e3">
+          <AttributeID>STATE</AttributeID>
+          <Name>STATE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0e6572ec-8826-4609-a080-8dd056fc91eb">
+          <AttributeID>SEX</AttributeID>
+          <Name>SEX</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="08f13068-c3c3-4e2d-9940-36616d67bacb">
+          <AttributeID>AGE</AttributeID>
+          <Name>AGE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8bd519dc-e067-4d0e-ac74-0c4df4b0b6df">
+          <AttributeID>AGE GROUP</AttributeID>
+          <Name>AGE GROUP</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ce7a8c4a-61a1-4dc3-bc25-8bcd96ed09a7">
+          <AttributeID>PHYSICAL CONDITION</AttributeID>
+          <Name>PHYSICAL CONDITION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d5d9891-f72a-466e-a640-95bda57d0357">
+          <AttributeID>SAFETY EQUIPMENT</AttributeID>
+          <Name>SAFETY EQUIPMENT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="48c79c54-6a21-4069-9169-754f14be3874">
+          <AttributeID>AIRBAG DEPLOYED</AttributeID>
+          <Name>AIRBAG DEPLOYED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f4b4a094-90e3-40fb-9379-bfcb6cdb502c">
+          <AttributeID>EJECTION</AttributeID>
+          <Name>EJECTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="935e4719-e26b-47d2-843b-f32359254bfe">
+          <AttributeID>CITY</AttributeID>
+          <Name>CITY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f0db7b8e-7dbe-49a6-9ecd-cc291a5e9580">
+          <AttributeID>New Sex</AttributeID>
+          <Name>New Sex</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2327b56d-5f6a-4493-bb34-06defc44ca43">
+      <ID>PERSON TYPE</ID>
+      <Name>PERSON TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31ca28de-04b9-4b13-bcc9-c9eb9dd138f4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3dc79308-94ec-4347-8fc7-844e0e4c61a6">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>PERSON_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11f794c1-aa51-4d8a-954c-ea6ca259b616">
+      <ID>CITY</ID>
+      <Name>CITY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b6bf8bf-94bc-4c48-9482-755f0b0e6da2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a10849e0-899e-4615-b6bc-4be1f3e90e8d">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>CITY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="28675b21-ad1f-4988-ab2b-30c945065f85">
+      <ID>STATE</ID>
+      <Name>STATE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c93dc9ba-422f-4038-a8b6-a5d063f5578b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="028f5e95-f484-47b7-810d-352ca79510bc">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>STATE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="86e7215e-e0fb-4710-a021-9f436aa43f43">
+      <ID>SEX</ID>
+      <Name>SEX</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d3a497b4-2acb-4308-a785-d1aea434bf88">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32fa111b-f5c3-4f1e-abd1-00f6a4709a12">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>SEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1a7ead5-d980-44a6-92af-bc493ab76323">
+      <ID>AGE</ID>
+      <Name>AGE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b82ba2d2-0072-44ca-be43-44fe809f69ba">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6950c65-6cab-4b86-9630-10569a591c11">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>AGE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="726e91f9-38e5-432f-a0dd-df88e66a84f4">
+      <ID>AGE GROUP</ID>
+      <Name>AGE GROUP</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4070d0f1-10dc-4dfc-a3c1-4b0d6ec5b891">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4ee13b10-b0a0-498f-88cc-63a6d052550f">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>AGE_GROUP</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8209bea5-6357-4363-8b1a-15fca7c14f21">
+      <ID>PHYSICAL CONDITION</ID>
+      <Name>PHYSICAL CONDITION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d1013d7-5489-4579-8611-1d79a3ed1077">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ddb8d629-2e00-4e5d-8101-1b63cbe4afde">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>PHYSICAL_CONDITION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="08ff9280-4340-4022-9178-6f4561ec6616">
+      <ID>SAFETY EQUIPMENT</ID>
+      <Name>SAFETY EQUIPMENT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8253686b-5e89-408f-b2a6-b7c1049c06e8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="716369fa-3684-43a7-8965-a8285c695e73">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>SAFETY_EQUIPMENT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c38b7fcc-fda0-4d59-93e7-11b97919c3b8">
+      <ID>AIRBAG DEPLOYED</ID>
+      <Name>AIRBAG DEPLOYED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95efdb79-e440-4d60-b07e-f9c5e5541c3a">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="efaad272-9b1b-421d-86e4-998e43e27bdd">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>AIRBAG_DEPLOYED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dd96a4f4-e058-490d-93e2-2c02da173a18">
+      <ID>EJECTION</ID>
+      <Name>EJECTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74d76498-c0b3-48b1-99c9-8f097e69acda">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56a983bc-4acb-4096-ba52-847f60b012ff">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>EJECTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d66a8ca-3419-41fb-860e-0f67bac5d4f0">
+      <ID>New Sex</ID>
+      <Name>New Sex</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10c06a4e-7a05-4a0a-ad60-c21a07fbaddc">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37464a07-2887-4046-a6f5-d3a713dd4093">
+            <TableID>Group_ID_16_person</TableID>
+            <ColumnID>New_Sex</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2a59a2f0-1058-4d33-ac63-88b6891fd85b">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="1671e24d-9087-4069-91b2-dcfff23440a5">
+          <ID>STATE</ID>
+          <Name>STATE</Name>
+          <SourceAttributeID>STATE</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="5ffbba4b-cb77-48dd-8df7-d5d4ecb01dbd">
+          <ID>CITY</ID>
+          <Name>CITY</Name>
+          <SourceAttributeID>CITY</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="29d058a2-753e-412b-9907-a1a9b95c573a">
+          <ID>PERSON ID</ID>
+          <Name>PERSON ID</Name>
+          <SourceAttributeID>PERSON ID</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

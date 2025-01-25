@@ -1,0 +1,28 @@
+WITH
+-- Define a calculated member to show the total damage for each person
+MEMBER [Measures].[Total Person Damage] AS
+    [Measures].[DAMAGE]
+ 
+-- Retrieve the person with the highest damage for each vehicle type and year
+MEMBER [Measures].[Person with Highest Damage] AS
+    TOPCOUNT(
+        [Person].[Person ID].Members,
+        1,
+        [Measures].[Total Person Damage]
+    ).Item(0).Name
+ 
+SELECT
+{
+    [Measures].[Total Person Damage],
+    [Measures].[Person with Highest Damage]
+} ON COLUMNS,
+ 
+NON EMPTY
+{
+    CROSSJOIN(
+        [Vehicle].[Vehicle Type].Members,
+        [Date].[Year].Members
+    )
+} ON ROWS
+ 
+FROM [Group ID 16 DB cube]

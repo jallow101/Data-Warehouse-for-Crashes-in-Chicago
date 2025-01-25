@@ -1,0 +1,204 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a57e5554-7f68-44b1-b55c-36ec35f877ee" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cause</ID>
+  <Name>Cause</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1343" scrolltop="-3029" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8202" y="9631" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="cause" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5477" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000065150000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Group_ID_16_cause" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1343</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3029</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="755b6ac0-a7ae-4c30-b809-1e3be3119909">
+    <DataSourceViewID>Group ID 16 DB</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="6130eb67-e9a7-42c8-a8ec-93a139152130">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="47219222-d70c-42ef-98dc-a75f2643aeb2">
+      <ID>CAUSE ID</ID>
+      <Name>CAUSE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb8887c4-2069-4374-a729-eb88be3abb27">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ea52c30-e948-4b3b-8a10-ad49f2c85d33">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>CAUSE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1b577dfc-c219-4a21-a21f-f82fb7b67c86">
+          <AttributeID>BAC RESULT</AttributeID>
+          <Name>BAC RESULT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f5eaf754-37c5-4a17-b19b-825fd5c14b66">
+          <AttributeID>DRIVER ACTION</AttributeID>
+          <Name>DRIVER ACTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4984c0bb-17ca-405a-840c-e524c76b5f3f">
+          <AttributeID>DRIVER VISION</AttributeID>
+          <Name>DRIVER VISION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eef4951e-52aa-42b7-988d-83e1150aed41">
+          <AttributeID>PRIM CONTRIBUTORY CAUSE</AttributeID>
+          <Name>PRIM CONTRIBUTORY CAUSE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bd273141-3e7c-48f5-ad3c-2e31911f16c3">
+          <AttributeID>SEC CONTRIBUTORY CAUSE</AttributeID>
+          <Name>SEC CONTRIBUTORY CAUSE</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="564685c6-8aa8-49cb-99e9-e09562246326">
+      <ID>BAC RESULT</ID>
+      <Name>BAC RESULT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="71b658ee-c96f-40ff-a6c8-5408b7c50175">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="58f77e10-4d71-4eb8-85ce-5648e6f0a724">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>BAC_RESULT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="22a26061-df1a-49a7-ac46-a5cfc6c4240d">
+      <ID>DRIVER ACTION</ID>
+      <Name>DRIVER ACTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c47b74f-e79e-45a3-b880-aac17a010e68">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fb04a69-e868-4716-9907-b4796c326636">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>DRIVER_ACTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a91cbb08-d8fb-4934-b724-eb81df1d2278">
+      <ID>DRIVER VISION</ID>
+      <Name>DRIVER VISION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b9dc255b-bb1f-472f-8221-5809998d0512">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="beedc056-9b68-41f3-a5a0-4498c0ac596d">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>DRIVER_VISION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="01902c52-9998-4992-a920-b92f590dcc0d">
+      <ID>PRIM CONTRIBUTORY CAUSE</ID>
+      <Name>PRIM CONTRIBUTORY CAUSE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b04d9f16-787c-44ed-ac97-83f1d7253433">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66f06d9a-c575-4fe8-a4e9-6f2e4066347b">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>PRIM_CONTRIBUTORY_CAUSE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a8411e18-5c97-4d86-819d-2eb71b7329c2">
+      <ID>SEC CONTRIBUTORY CAUSE</ID>
+      <Name>SEC CONTRIBUTORY CAUSE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f952c3e9-b06a-4ea4-8217-149d22b4573c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18769749-f14e-466e-8ef3-45e87a76d46a">
+            <TableID>Group_ID_16_cause</TableID>
+            <ColumnID>SEC_CONTRIBUTORY_CAUSE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

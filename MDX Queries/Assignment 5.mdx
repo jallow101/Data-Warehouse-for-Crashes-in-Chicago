@@ -1,0 +1,40 @@
+WITH
+-- Calculate the average number of vehicles for the current quarter
+MEMBER [Measures].[Current Quarter Vehicles] AS
+    [Measures].[NUM UNITS]
+ 
+-- Calculate the average number of vehicles for the corresponding quarter of the previous year
+MEMBER [Measures].[Previous Year Quarter Vehicles] AS
+    AVG(
+        [Date].[Quarter].CurrentMember.PrevMember,
+        [Measures].[NUM UNITS]
+    )
+ 
+-- Calculate the percentage increase
+MEMBER [Measures].[Vehicle Increase Percentage] AS
+    IIF(
+        [Measures].[Previous Year Quarter Vehicles] <> 0,
+        ([Measures].[Current Quarter Vehicles] - [Measures].[Previous Year Quarter Vehicles]) / [Measures].[Previous Year Quarter Vehicles] * 100,
+        NULL
+    ),
+    FORMAT_STRING = "0.00%"
+ 
+SELECT
+{
+    [Measures].[Current Quarter Vehicles],
+    [Measures].[Previous Year Quarter Vehicles],
+    [Measures].[Vehicle Increase Percentage]
+} ON COLUMNS,
+ 
+NON EMPTY
+{
+    FILTER(
+        CROSSJOIN(
+            [Date].[Quarter].Members,
+            [Geography].[Location].Members
+        ),
+        [Measures].[Current Quarter Vehicles] > [Measures].[Previous Year Quarter Vehicles]
+    )
+} ON ROWS
+ 
+FROM [Group ID 16 DB cube]

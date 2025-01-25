@@ -1,0 +1,59 @@
+WITH
+-- Calculate the weighted factor count (Primary factor is given double weight)
+MEMBER [Measures].[Weighted Factor Count] AS
+    ([Measures].[NUM UNITS] * 2) + [Measures].[DAMAGE TO USER COUNT]
+
+-- Identify the most frequent cause for each year (exclude "All")
+MEMBER [Measures].[Most Frequent Cause] AS
+    TOPCOUNT(
+        EXCEPT(
+            [Cause].[PRIM CONTRIBUTORY CAUSE].MEMBERS,
+            {[Cause].[PRIM CONTRIBUTORY CAUSE].[All]}
+        ),
+        1,
+        [Measures].[Weighted Factor Count]
+    ).ITEM(0).MEMBER_CAPTION
+
+-- Calculate the total damage costs for the most frequent cause (exclude "All")
+MEMBER [Measures].[Total Damage for Most Frequent Cause] AS
+    SUM(
+        FILTER(
+            EXCEPT(
+                [Cause].[PRIM CONTRIBUTORY CAUSE].MEMBERS,
+                {[Cause].[PRIM CONTRIBUTORY CAUSE].[All]}
+            ),
+            [Cause].[PRIM CONTRIBUTORY CAUSE].CURRENTMEMBER.NAME = 
+            TOPCOUNT(
+                EXCEPT(
+                    [Cause].[PRIM CONTRIBUTORY CAUSE].MEMBERS,
+                    {[Cause].[PRIM CONTRIBUTORY CAUSE].[All]}
+                ),
+                1,
+                [Measures].[Weighted Factor Count]
+            ).ITEM(0).MEMBER_CAPTION
+        ),
+        [Measures].[DAMAGE]
+    )
+
+-- Identify the overall most frequent cause across all years (exclude "All")
+MEMBER [Measures].[Overall Most Frequent Cause] AS
+    TOPCOUNT(
+        EXCEPT(
+            [Cause].[PRIM CONTRIBUTORY CAUSE].MEMBERS,
+            {[Cause].[PRIM CONTRIBUTORY CAUSE].[All]}
+        ),
+        1,
+        SUM(
+            [Date].[Year].MEMBERS,
+            [Measures].[Weighted Factor Count]
+        )
+    ).ITEM(0).MEMBER_CAPTION
+
+SELECT
+{
+    [Measures].[Most Frequent Cause],
+    [Measures].[Total Damage for Most Frequent Cause],
+    [Measures].[Overall Most Frequent Cause]
+} ON COLUMNS,
+[Date].[Year].MEMBERS ON ROWS
+FROM [Group ID 16 DB cube]

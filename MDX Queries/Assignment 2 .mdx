@@ -1,0 +1,57 @@
+WITH 
+
+-- Calculate monthly damage at the location level, using more explicit scope definitions
+
+MEMBER [Measures].[Monthly Location Damage] AS
+
+    SUM(
+
+        NONEMPTY(
+
+            {[Date].[MONTH].CurrentMember},
+
+            [Measures].[DAMAGE]
+
+        ),
+
+        [Measures].[DAMAGE]
+
+    )
+
+-- Calculate total location damage (simplified, as this appears to work fine)
+
+MEMBER [Measures].[Total Location Damage] AS
+
+    SUM(
+
+        {[Geography].[LOCATION].CurrentMember},
+
+        [Measures].[DAMAGE]
+
+    )
+
+SELECT
+
+{
+
+    [Measures].[Monthly Location Damage],
+
+    [Measures].[Total Location Damage]
+
+} ON COLUMNS,
+
+NONEMPTY(
+
+    CROSSJOIN(
+
+        [Date].[MONTH].Members,
+
+        [Geography].[LOCATION].Members
+
+    ),
+
+    [Measures].[DAMAGE]
+
+) ON ROWS
+
+FROM [Group ID 16 DB cube]

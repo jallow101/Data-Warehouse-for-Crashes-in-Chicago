@@ -1,0 +1,3407 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/5/2024 1:38:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UTENTE-Q3NL7IKE"
+  DTS:CreatorName="UTENTE-Q3NL7IKE\LDS"
+  DTS:DTSID="{E9229930-F9A4-470A-956F-196B674CBC87}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D10196DB-3872-4F14-9044-A7A68D8461DD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{833A94A5-E0BC-4D0C-A54B-D417A5B2C67A}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\LDS\Downloads\Query7b.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR"
+              DTS:DTSID="{81F2CFBF-0E93-496A-9240-93D883F9EA1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AVG_DAMAGE_YEARLY"
+              DTS:DTSID="{86914B69-A5A8-43FF-8B13-9F31A2589895}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIGHT_TOTAL_DAMAGE"
+              DTS:DTSID="{BDC8E65B-95E4-4D0B-B96A-27CF9BF1B061}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAY_TOTAL_DAMAGE"
+              DTS:DTSID="{6128C3DA-476B-43F8-9262-A698E22EDF11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH"
+              DTS:DTSID="{3CF85309-2D94-42F0-AB32-2225EB761FD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="9"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Night_Percentage"
+              DTS:DTSID="{A24DA4FB-074F-4969-8E36-787DDCAFAE84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="9"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAY_Perentage"
+              DTS:DTSID="{33AC231C-DA9C-41BF-BC52-7AC3199B5C9D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{904AB305-C571-449A-9FC3-5EBD57524851}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\LDS\Downloads\Query7b.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR"
+              DTS:DTSID="{49F92D2C-4B00-4625-8DC1-2E7442C7CD55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AVG_DAMAGE_YEARLY"
+              DTS:DTSID="{114E1549-BE0D-4BF1-A015-5EDBC7F381B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIGHT_TOTAL_DAMAGE"
+              DTS:DTSID="{B021D681-C486-4C81-96B0-DCD2BD5FD668}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAY_TOTAL_DAMAGE"
+              DTS:DTSID="{1827E1F4-340E-4A8A-8040-643271139410}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH"
+              DTS:DTSID="{362CAA0B-599D-43EB-8BEC-E7C9D6D8502F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="9"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Night_Percentage"
+              DTS:DTSID="{D27B6F45-1CB7-4138-9C56-EECE89EF767E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B31CA24D-45F9-414F-95B2-C827CE9F16E6}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\LDS\Downloads\Query7b.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR"
+              DTS:DTSID="{9062711F-2464-4AF9-B4C9-C10939B9B2A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH"
+              DTS:DTSID="{9239B5B9-194D-482E-9CC8-6A5B1772C38D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIME_RANGE"
+              DTS:DTSID="{FAD3C6B8-473F-4478-8F85-5923EB512EFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL_DAMAGE_COST"
+              DTS:DTSID="{2778FD35-3A7A-46EA-85E7-26DF09B0A974}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AVG_DAMAGE_COST_PER_YEAR"
+              DTS:DTSID="{686053E3-9DC0-4E82-B246-0E36868C1433}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="9"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PERCENTAGE_OF_AVG"
+              DTS:DTSID="{E9D6C7C0-773D-4294-B841-3FB33214912B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1FBBDA79-8C23-4F67-9F7D-AACD716B8D34}"
+      DTS:ObjectName="lds.di.unipi.it.Group_ID_16_DB.Group_ID_16">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_ID_16;Initial Catalog=Group_ID_16_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{1FBBDA79-8C23-4F67-9F7D-AACD716B8D34}lds.di.unipi.it.Group_ID_16_DB.Group_ID_16;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANbWtKeho/k2Ip8+mcqq/pgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADobI2FuxFi83fW1nW1iIpjIBk7Qq6kGzqTKzoF4+uI9wAAAAAOgAAAAAIAACAAAADrbwXvgMbFU5/uc9BYKR9qOIBd5gikpZuEReYKR9EJnCAAAAD6YWZGSs7BIrMgtXYanuDjRBd3VlJ5Dr1M/6gVHp5WtEAAAADnYG7hwo+2hCITDoin+s+mE5x10yn6CTf4Y+RxZgRGaeZgGfLECWOxzdctP5jHKFEk69Sf6+erQ3TVLCup2UuM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2D83C6F5-9A5B-4679-9592-525A8330C7E9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[DAMAGE_COSTS]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE_COSTS"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAY_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAY_DAMAGE_COST]"
+                      name="TOTAL_DAY_DAMAGE_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Aggregate 1"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregate 1.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Inputs[Aggregate Input 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Inputs[Aggregate Input 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Inputs[Aggregate Input 1].Columns[DAMAGE_COSTS]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE_COSTS"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      name="TOTAL_NIGHT_DAMAGE_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Aggregate 2"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate 2"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Aggregate 2.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate 2.Inputs[Aggregate Input 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Aggregate 2.Inputs[Aggregate Input 1].Columns[TOTAL_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      name="AVG_DAMAGE_COST_PER_YEAR"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[HOUR]"
+                      cachedDataType="i4"
+                      cachedName="HOUR"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[NIGHT]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NIGHT"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]} &gt;= 21 || #{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]} &lt; 8</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">HOUR &gt;= 21 || HOUR &lt; 8</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[DAY]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="DAY"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]} &gt;= 8 &amp;&amp; #{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]} &lt; 21</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">HOUR &gt;= 8 &amp;&amp; HOUR &lt; 21</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\damage_to_user"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="damage_to_user"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Group_ID_16].[damage_to_user]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\damage_to_user.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE]"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DATE_ID]"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DATE_ID]"
+                      name="DATE_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[VEHICLE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VEHICLE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DATE_ID]"
+                      dataType="i4"
+                      name="DATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[CRASH_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CRASH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[PERSON_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PERSON_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE]"
+                      dataType="numeric"
+                      name="DAMAGE"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[DAMAGE_CATEGORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DAMAGE_CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[NUM_UNITS]"
+                      dataType="i4"
+                      name="NUM_UNITS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[GEOGRAPHY_ID]"
+                      dataType="i4"
+                      name="GEOGRAPHY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[CAUSE_ID]"
+                      dataType="i4"
+                      name="CAUSE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[WEATHER_ID]"
+                      dataType="i4"
+                      name="WEATHER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[INJURIES_ID]"
+                      dataType="i4"
+                      name="INJURIES_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].ExternalColumns[UNIT_NO]"
+                      dataType="i4"
+                      name="UNIT_NO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Error Output].Columns[DATE_ID]"
+                      name="DATE_ID" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\date"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="date"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Group_ID_16].[date]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\date.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_16_DB.Group_ID_16]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[DATE_ID]"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[DATE_ID]"
+                      name="DATE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[MONTH]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[MONTH]"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[MONTH]"
+                      name="MONTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[HOUR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[HOUR]"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[HOUR]"
+                      name="HOUR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[YEAR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[YEAR]"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[YEAR]"
+                      name="YEAR"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[DATE_ID]"
+                      dataType="i4"
+                      name="DATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[DATE_POLICE_NOTIFIED]"
+                      dataType="dbTimeStamp"
+                      name="DATE_POLICE_NOTIFIED" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[DATE]"
+                      dataType="dbDate"
+                      name="DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[YEAR]"
+                      dataType="i4"
+                      name="YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[QUARTER]"
+                      dataType="i4"
+                      name="QUARTER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[MONTH]"
+                      dataType="i4"
+                      name="MONTH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[WEEK]"
+                      dataType="i4"
+                      name="WEEK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[WEEKEND]"
+                      dataType="i4"
+                      name="WEEKEND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[DAY]"
+                      dataType="i4"
+                      name="DAY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[HOUR]"
+                      dataType="i4"
+                      name="HOUR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].ExternalColumns[TIME]"
+                      dataType="dbTime2"
+                      name="TIME"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[DATE_ID]"
+                      name="DATE_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[MONTH]"
+                      name="MONTH" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[HOUR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[HOUR]"
+                      name="HOUR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Error Output].Columns[YEAR]"
+                      name="YEAR" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_DAY_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_NIGHT_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TIME_RANGE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TIME_RANGE]"
+                      name="TIME_RANGE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]}) ? "Night" : "Day"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(TOTAL_DAMAGE_DAY_COST) ? "Night" : "Day"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]"
+                      name="TOTAL_DAMAGE_COST"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]}) ? #{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]} : #{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(TOTAL_DAMAGE_DAY_COST) ? TOTAL_NIGHT_DAMAGE_COST : TOTAL_DAMAGE_DAY_COST</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input].Columns[TOTAL_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TOTAL_DAMAGE_COST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      cachedDataType="numeric"
+                      cachedName="AVG_DAMAGE_COST_PER_YEAR"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[AVG_DAMAGE_COST_PER_YEAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[PERCENTAGE_OF_AVG]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[PERCENTAGE_OF_AVG]"
+                      name="PERCENTAGE_OF_AVG"
+                      precision="38"
+                      scale="9"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(#{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TOTAL_DAMAGE_COST]} / #{Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[AVG_DAMAGE_COST_PER_YEAR]}) * 100</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(TOTAL_DAMAGE_COST / AVG_DAMAGE_COST_PER_YEAR) * 100</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YEAR]"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MONTH]"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TIME_RANGE]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="TIME_RANGE"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TIME_RANGE]"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TIME_RANGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TOTAL_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TOTAL_DAMAGE_COST]"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TOTAL_DAMAGE_COST]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      cachedDataType="numeric"
+                      cachedName="AVG_DAMAGE_COST_PER_YEAR"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AVG_DAMAGE_COST_PER_YEAR]"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[AVG_DAMAGE_COST_PER_YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PERCENTAGE_OF_AVG]"
+                      cachedDataType="numeric"
+                      cachedName="PERCENTAGE_OF_AVG"
+                      cachedPrecision="38"
+                      cachedScale="9"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PERCENTAGE_OF_AVG]"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[PERCENTAGE_OF_AVG]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[YEAR]"
+                      dataType="i4"
+                      name="YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MONTH]"
+                      dataType="i4"
+                      name="MONTH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TIME_RANGE]"
+                      dataType="wstr"
+                      length="5"
+                      name="TIME_RANGE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TOTAL_DAMAGE_COST]"
+                      dataType="numeric"
+                      name="TOTAL_DAMAGE_COST"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AVG_DAMAGE_COST_PER_YEAR]"
+                      dataType="numeric"
+                      name="AVG_DAMAGE_COST_PER_YEAR"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PERCENTAGE_OF_AVG]"
+                      dataType="numeric"
+                      name="PERCENTAGE_OF_AVG"
+                      precision="38"
+                      scale="9" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[DATE_ID]"
+                      cachedDataType="i4"
+                      cachedName="DATE_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DATE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[DATE_ID]"
+                      cachedDataType="i4"
+                      cachedName="DATE_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DATE_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[HOUR]"
+                      cachedDataType="i4"
+                      cachedName="HOUR"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[HOUR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[YEAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DAMAGE_COSTS]"
+                      name="DAMAGE_COSTS"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[HOUR]"
+                      name="HOUR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[HOUR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Merge Join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[TIME_RANGE]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="TIME_RANGE"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TIME_RANGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[TOTAL_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_DAMAGE_COST]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      cachedDataType="numeric"
+                      cachedName="AVG_DAMAGE_COST_PER_YEAR"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[AVG_DAMAGE_COST_PER_YEAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TIME_RANGE]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TIME_RANGE]"
+                      name="TIME_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[TIME_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TOTAL_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[TOTAL_DAMAGE_COST]"
+                      name="TOTAL_DAMAGE_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input].Columns[TOTAL_DAMAGE_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      name="AVG_DAMAGE_COST_PER_YEAR"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input].Columns[AVG_DAMAGE_COST_PER_YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[DAMAGE]"
+                      cachedDataType="numeric"
+                      cachedName="DAMAGE"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[DATE_ID]"
+                      cachedDataType="i4"
+                      cachedName="DATE_ID"
+                      lineageId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DATE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DAMAGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DATE_ID]"
+                      name="DATE_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output].Columns[DATE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[DATE_ID]"
+                      cachedDataType="i4"
+                      cachedName="DATE_ID"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[DATE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[MONTH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[HOUR]"
+                      cachedDataType="i4"
+                      cachedName="HOUR"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[HOUR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DATE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DATE_ID]"
+                      name="DATE_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[DATE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[HOUR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[HOUR]"
+                      name="HOUR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[HOUR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\date.Outputs[OLE DB Source Output].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_DAY_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_NIGHT_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[TIME_RANGE]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="TIME_RANGE"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TIME_RANGE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[TOTAL_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      name="TOTAL_DAMAGE_DAY_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      name="TOTAL_NIGHT_DAMAGE_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TIME_RANGE]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TIME_RANGE]"
+                      name="TIME_RANGE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TIME_RANGE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[TOTAL_DAMAGE_COST]"
+                      name="TOTAL_DAMAGE_COST"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[TOTAL_DAMAGE_COST]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 3"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 3"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      cachedDataType="numeric"
+                      cachedName="AVG_DAMAGE_COST_PER_YEAR"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[AVG_DAMAGE_COST_PER_YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[AVG_DAMAGE_COST_PER_YEAR]"
+                      name="AVG_DAMAGE_COST_PER_YEAR"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1].Columns[AVG_DAMAGE_COST_PER_YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[MONTH]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[TOTAL_DAY_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_DAY_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[TOTAL_DAY_DAMAGE_COST]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[MONTH]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      cachedDataType="numeric"
+                      cachedName="TOTAL_NIGHT_DAMAGE_COST"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR]"
+                      name="YEAR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MONTH]"
+                      name="MONTH" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_DAMAGE_DAY_COST]"
+                      name="TOTAL_DAMAGE_DAY_COST"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TOTAL_NIGHT_DAMAGE_COST]"
+                      name="TOTAL_NIGHT_DAMAGE_COST"
+                      precision="18"
+                      scale="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Aggregate 1.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 11]"
+              endId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Aggregate 2.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 12]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[DAY]"
+              endId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+              name="DAY"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[DAY]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Merge Join 1.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output1]"
+              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
+              endId="Package\Data Flow Task\Aggregate 2.Inputs[Aggregate Input 1]"
+              name="Multicast Output 1"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
+              endId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
+              name="Multicast Output 2"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\Data Flow Task.Paths[NIGHT]"
+              endId="Package\Data Flow Task\Aggregate 1.Inputs[Aggregate Input 1]"
+              name="NIGHT"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[NIGHT]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\date.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\damage_to_user.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
+              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output2]"
+              endId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output3]"
+              endId="Package\Data Flow Task\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 3"
+          TopLeft="844.285714285714,798.571428571429" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="362,110" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Data Flow Task\Aggregate 1"
+          TopLeft="684.285714285714,394.285714285714" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="678.035714285715,650.535714285714" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="671.428571428571,895.714285714286" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\Aggregate"
+          TopLeft="474.285714285714,400" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\damage_to_user"
+          TopLeft="311,31" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Data Flow Task\Aggregate 2"
+          TopLeft="815.714285714286,707.142857142857" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="505.428571428571,231.142857142857" />
+        <NodeLayout
+          Size="100,42"
+          Id="Package\Data Flow Task\date"
+          TopLeft="91,143" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="658.333333333333,570" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="625.714285714286,487.142857142857" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="279,259" />
+        <NodeLayout
+          Size="155,49"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="497.777777777778,306.666666666667" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Merge Join 1"
+          TopLeft="530,818.571428571429" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="665.714285714286,997.142857142857" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 2"
+          TopLeft="562.857142857143,738.571428571428" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 12]"
+          TopLeft="537.785714285714,442">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.428571428572,45.1428571428572"
+              Start="0,0"
+              End="148.428571428572,37.6428571428572">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5714285714286"
+                    Point2="0,22.5714285714286"
+                    Point3="4,22.5714285714286" />
+                  <mssgle:LineSegment
+                    End="144.428571428572,22.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.428571428572,22.5714285714286"
+                    Point2="148.428571428572,22.5714285714286"
+                    Point3="148.428571428572,26.5714285714286" />
+                  <mssgle:LineSegment
+                    End="148.428571428572,37.6428571428572" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 11]"
+          TopLeft="883.714285714286,749.142857142857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.0714285714287,49.4285714285714"
+              Start="0,0"
+              End="14.0714285714287,41.9285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7142857142857"
+                    Point2="0,24.7142857142857"
+                    Point3="4,24.7142857142857" />
+                  <mssgle:LineSegment
+                    End="10.0714285714287,24.7142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.0714285714287,24.7142857142857"
+                    Point2="14.0714285714287,24.7142857142857"
+                    Point3="14.0714285714287,28.7142857142857" />
+                  <mssgle:LineSegment
+                    End="14.0714285714287,41.9285714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="752.285714285714,436.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.2380952380952,50.8571428571429"
+              Start="0,0"
+              End="-47.2380952380952,43.3571428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1160568632021" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.1160568632021"
+                    Point2="0,30.1160568632021"
+                    Point3="-4,30.1160568632021" />
+                  <mssgle:LineSegment
+                    End="-43.2380952380952,30.1160568632021" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.2380952380952,30.1160568632021"
+                    Point2="-47.2380952380952,30.1160568632021"
+                    Point3="-47.2380952380952,34.1160568632021" />
+                  <mssgle:LineSegment
+                    End="-47.2380952380952,43.3571428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="686.214285714286,529.142857142857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.1190476190476,40.8571428571429"
+              Start="0,0"
+              End="49.1190476190476,33.3571428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4285714285714"
+                    Point2="0,20.4285714285714"
+                    Point3="4,20.4285714285714" />
+                  <mssgle:LineSegment
+                    End="45.1190476190476,20.4285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.1190476190476,20.4285714285714"
+                    Point2="49.1190476190476,20.4285714285714"
+                    Point3="49.1190476190476,24.4285714285714" />
+                  <mssgle:LineSegment
+                    End="49.1190476190476,33.3571428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output3]"
+          TopLeft="844.285714285714,819.571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-175.285714285714,20"
+              Start="0,0"
+              End="-167.785714285714,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-83.6428571428572,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-83.6428571428572,0"
+                    Point2="-87.6428571428572,0"
+                    Point3="-87.6428571428572,4" />
+                  <mssgle:LineSegment
+                    End="-87.6428571428572,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-87.6428571428572,16"
+                    Point2="-87.6428571428572,20"
+                    Point3="-91.6428571428572,20" />
+                  <mssgle:LineSegment
+                    End="-167.785714285714,20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output2]"
+          TopLeft="616.357142857143,780.571428571428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.8571428571429,38.0000000000001"
+              Start="0,0"
+              End="-16.8571428571429,30.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0000000000001"
+                    Point2="0,19.0000000000001"
+                    Point3="-4,19.0000000000001" />
+                  <mssgle:LineSegment
+                    End="-12.8571428571429,19.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.8571428571429,19.0000000000001"
+                    Point2="-16.8571428571429,19.0000000000001"
+                    Point3="-16.8571428571429,23.0000000000001" />
+                  <mssgle:LineSegment
+                    End="-16.8571428571429,30.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="411,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.428571428571,79.1428571428572"
+              Start="0,0"
+              End="159.428571428571,71.6428571428572">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5714285714286"
+                    Point2="0,39.5714285714286"
+                    Point3="4,39.5714285714286" />
+                  <mssgle:LineSegment
+                    End="155.428571428571,39.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.428571428571,39.5714285714286"
+                    Point2="159.428571428571,39.5714285714286"
+                    Point3="159.428571428571,43.5714285714286" />
+                  <mssgle:LineSegment
+                    End="159.428571428571,71.6428571428572" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="386,280">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.428571428571,-27.8571428571428"
+              Start="0,0"
+              End="111.928571428571,-27.8571428571428">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.7142857142857,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.7142857142857,0"
+                    Point2="59.7142857142857,0"
+                    Point3="59.7142857142857,-4" />
+                  <mssgle:LineSegment
+                    End="59.7142857142857,-23.8571428571428" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.7142857142857,-23.8571428571428"
+                    Point2="59.7142857142857,-27.8571428571428"
+                    Point3="63.7142857142857,-27.8571428571428" />
+                  <mssgle:LineSegment
+                    End="111.928571428571,-27.8571428571428" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="390,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21,37"
+              Start="0,0"
+              End="21,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="17,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17,18.5"
+                    Point2="21,18.5"
+                    Point3="21,22.5" />
+                  <mssgle:LineSegment
+                    End="21,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="141,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191.5,74"
+              Start="0,0"
+              End="191.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="4,37" />
+                  <mssgle:LineSegment
+                    End="187.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="187.5,37"
+                    Point2="191.5,37"
+                    Point3="191.5,41" />
+                  <mssgle:LineSegment
+                    End="191.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[NIGHT]"
+          TopLeft="599.777777777778,355.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.507936507937,38.6190476190476"
+              Start="0,0"
+              End="152.507936507937,31.1190476190476">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.6843641671228" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.6843641671228"
+                    Point2="0,15.6843641671228"
+                    Point3="4,15.6843641671228" />
+                  <mssgle:LineSegment
+                    End="148.507936507937,15.6843641671228" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.507936507937,15.6843641671228"
+                    Point2="152.507936507937,15.6843641671228"
+                    Point3="152.507936507937,19.6843641671228" />
+                  <mssgle:LineSegment
+                    End="152.507936507937,31.1190476190476" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="60.7902573164683,20.6843641671228,30.927421875,9.5439453125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
+          TopLeft="719.369047619048,692.535714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-103.011904761905,46.0357142857142"
+              Start="0,0"
+              End="-103.011904761905,38.5357142857142">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.7777255639098" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.7777255639098"
+                    Point2="0,18.7777255639098"
+                    Point3="-4,18.7777255639098" />
+                  <mssgle:LineSegment
+                    End="-99.011904761905,18.7777255639098" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-99.011904761905,18.7777255639098"
+                    Point2="-103.011904761905,18.7777255639098"
+                    Point3="-103.011904761905,22.7777255639098" />
+                  <mssgle:LineSegment
+                    End="-103.011904761905,38.5357142857142" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="798.035714285715,671.535714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.6785714285711,35.6071428571429"
+              Start="0,0"
+              End="85.6785714285711,28.1071428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="81.6785714285711,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.6785714285711,0"
+                    Point2="85.6785714285711,0"
+                    Point3="85.6785714285711,4" />
+                  <mssgle:LineSegment
+                    End="85.6785714285711,28.1071428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
+          TopLeft="572.853174603175,273.142857142857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.5238095238095"
+              Start="0,0"
+              End="0,26.0238095238095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0238095238095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="599.5,860.571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="153.428571428571,35.1428571428571"
+              Start="0,0"
+              End="153.428571428571,27.6428571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5714285714286"
+                    Point2="0,17.5714285714286"
+                    Point3="4,17.5714285714286" />
+                  <mssgle:LineSegment
+                    End="149.428571428571,17.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="149.428571428571,17.5714285714286"
+                    Point2="153.428571428571,17.5714285714286"
+                    Point3="153.428571428571,21.5714285714286" />
+                  <mssgle:LineSegment
+                    End="153.428571428571,27.6428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="752.321428571429,937.714285714286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.4285714285713"
+              Start="0,0"
+              End="0,51.9285714285713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.9285714285713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="736.684523809524,612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5357142857143"
+              Start="0,0"
+              End="0,31.0357142857143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.0357142857143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[DAY]"
+          TopLeft="575.277777777778,355.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37.4920634920635,44.3333333333333"
+              Start="0,0"
+              End="-37.4920634920635,36.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.1666666666667"
+                    Point2="0,22.1666666666667"
+                    Point3="-4,22.1666666666667" />
+                  <mssgle:LineSegment
+                    End="-33.4920634920635,22.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.4920634920635,22.1666666666667"
+                    Point2="-37.4920634920635,22.1666666666667"
+                    Point3="-37.4920634920635,26.1666666666667" />
+                  <mssgle:LineSegment
+                    End="-37.4920634920635,36.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-28.6799770585317,27.1666666666667,19.867890625,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\damage_to_user">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\date">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
